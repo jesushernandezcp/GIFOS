@@ -1,0 +1,58 @@
+
+//ESTILOS DEL HEADER
+
+//mixins
+@mixin menu {
+    font-family: var(--primary-font);
+    font-size: 13px;
+    color: #572EE5;
+    letter-spacing: 0;
+    text-align: center;    
+    
+}
+
+header{
+    width: 100%;
+    border-top: 6px solid blue;
+    display: flex;
+    
+    #logo{
+        align-items: center;
+        position: relative;
+        
+        width: 59.1px;
+        height: 59.1px;
+        margin-left: 10.8%;
+        margin-top: 1.5%;
+        border: 1px solid black;
+    }
+    
+    nav{
+        position: relative;
+        margin-left: 50%;
+        margin-top: 1.5%;
+        display: flex;
+        border: 1px solid black;
+        ul{
+            display: inline-flex;
+            padding-top: 5px;
+            border: 1px solid blue;
+            
+            li{
+                @include menu();    
+                display: inline-flex;
+                padding-right: 50px;
+            }
+        }
+        #boton_gifo{
+            position: relative;
+            display: flex;
+            width: 54px;
+            height: 54px;
+            
+            border: 1px solid black;
+        }
+    }
+    
+    
+}

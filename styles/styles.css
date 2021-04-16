@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap");
+header {
+  width: 100%;
+  border-top: 6px solid blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header #logo {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 59.1px;
+  height: 59.1px;
+  margin-left: 10.8%;
+  margin-top: 1.5%;
+  border: 1px solid black;
+}
+
+header nav {
+  position: relative;
+  margin-left: 50%;
+  margin-top: 1.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+}
+
+header nav ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-top: 5px;
+  border: 1px solid blue;
+}
+
+header nav ul li {
+  font-family: var(--primary-font);
+  font-size: 13px;
+  color: #572EE5;
+  letter-spacing: 0;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-right: 50px;
+}
+
+header nav #boton_gifo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 54px;
+  height: 54px;
+  border: 1px solid black;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+:root {
+  --primary-font:'Montserrat', sans-serif;
+  --secondary-font:'IBM Plex Sans', sans-serif;
+}
+
+#intermedio {
+  margin-top: 0.6%;
+  width: 80.8%;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  left: 10.8%;
+  border: 1px solid black;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#intermedio #icon_misgif {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  position: relative;
+  width: 24px;
+  height: 21.9px;
+}
+
+#intermedio h1 {
+  position: relative;
+  font-family: var(--primary-font);
+  font-size: 25px;
+  color: #572EE5;
+}
+
+#trending {
+  width: 100%;
+  border: 2px solid black;
+  position: relative;
+  display: inline-block;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+footer {
+  width: 100%;
+  border: 2px solid black;
+  position: relative;
+  display: inline-block;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+}
+
+#result {
+  background-color: blue;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: right;
+      -ms-flex-pack: right;
+          justify-content: right;
+}
+
+input ul a:hover {
+  color: #00F3BB;
+  text-decoration: line-through;
+}
+
+input ul a:active {
+  color: rgba(6, 10, 36, 0.56);
+  text-decoration: line-through;
+}
+
+input ul li {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  font-family: var(--primary-font);
+  color: #060A24;
+  letter-spacing: 0;
+  line-height: 28px;
+  padding-right: 50px;
+}
+
+input ul li a {
+  text-decoration: none;
+  color: #060A24;
+}
+/*# sourceMappingURL=styles.css.map */
