@@ -1,0 +1,85 @@
+
+
+#iconsecfav{
+    width: 28px;
+    height: 21px;
+    position: relative;
+    margin-top: 50px;
+    margin-left: 50%;
+    
+}
+
+.pfav{
+font-family: var(--primary-font);
+font-size: 25px;
+color: #572EE5;
+text-align: center;
+line-height: 30px;
+background: darkblue;
+position: relative;
+
+}
+
+
+//SECCION DONDE SE MUESTRAN LOS GIFOS FAVORITOS ALMACENADOS EN EL STORAGE
+#showfav{
+    
+    display: inline-flex;
+    border: 1px solid black;
+    background-color: blue;
+    max-width: 78.4%;
+    max-height: 58%;
+    margin-left: 10.8%;
+    margin-right: 10.9%;
+    flex-wrap: wrap;
+    
+    .gifav {
+        display: flex;
+        position: relative;
+        width: 240px;
+        height: 180px;
+        background-color: yellow;
+        margin-right: 23.5px;
+        margin-bottom: 2%;
+        overflow: hidden;
+        
+        .imgfav {
+            position: relative;
+            z-index: 1;
+            background-color: red;
+            width: 240px;
+            height: 180px;
+            
+        }
+        .favsec{
+            width: 32px;
+            position: absolute;
+            margin-top: 17px;
+            margin-left: 53px;
+            z-index: 2;
+            visibility: visible;
+            
+        }
+        .down{
+            width: 32px;
+            position: absolute;
+            margin-top: 17px;
+            margin-left: 95px;
+            z-index: 2;
+        }
+        .exp {
+        width: 32px;
+        position: absolute;
+        margin-top: 17px;
+        margin-left: 137px;
+        z-index: 2;
+        }
+        .trash{
+            width: 32px;
+            position: absolute;
+            margin-top: 17px;
+            margin-left: 180px;
+            z-index: 2;
+        }
+    }    
+}

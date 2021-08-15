@@ -1,0 +1,228 @@
+
+//ESTILO DEL INTERMEDIO
+//SECCION INDEX.HTML
+#busqueda {
+
+    position: relative;
+    border: 1px solid black;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+
+
+    #p0 {
+        font-family: var(--primary-font);
+        font-size: 35px;
+        color: #572EE5;
+
+        line-height: 50px;
+        border: 1px solid black;
+        width: 44.9%;
+        height: 6.6%;
+        text-align: center;
+        margin: auto;
+
+        span {
+            color: #50E3C2;
+        }
+    }
+
+
+
+    img {
+        display: block;
+        position: relative;
+        padding-top: 20px;
+        margin: auto;
+    }
+
+    input {
+        background: #FFFFFF;
+        border: 1px solid #572EE5;
+        text-align: center;
+        border-radius: 27px;
+        width: 551px;
+        height: 50px;
+        font-family: 'Roboto', sans-serif;
+        font-size: 16px;
+        color: #9CAFC3;
+        //text-align: left;
+        margin: auto;
+
+    }
+
+    #p1 {
+        margin-top: 60px;
+        font-size: 16px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 25px;
+        border: 1px solid blue;
+        position: relative;
+
+        span {
+            font-size: 18px;
+            color: #572EE5;
+            text-align: center;
+            line-height: 25px;
+            font-family: var(--primary-font);
+        }
+    }
+
+}
+
+//ESTILO DEL CARRUSEL
+#trending {
+    background: #F3F5F8;
+    border: 1px solid black;
+    display: inline-flex;
+    width: 100%;
+    height: 42.1%;
+    justify-content: center;
+    margin-top: 10.7%;
+    
+    
+    h1 {
+        font-family: 'Montserrat', sans-serif;
+        font-size: 25px;
+        color: #572EE5;
+        //text-align: center;
+        line-height: 30px;
+        //margin-top: -400px;
+        justify-self: center;
+        position: absolute;
+        //margin-left: 50%;
+
+    }
+
+    h2 {
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        color: #000000;
+        //text-align: center;
+        position: absolute;
+        margin-top: 55px;
+        //margin-left: 35%;
+
+    }
+
+    #sleft {
+        margin-left: 6.1%;
+        z-index: 2;
+        border: 1px solid black;
+        background: salmon;
+        position: relative;
+
+                
+    }
+
+    #sright {
+        margin-right: 6.4%;
+        border: 1px solid black;
+        background: yellow;
+    }
+
+    .giftrending {
+        display: flex;
+        position: relative;
+        padding-top: 100px;
+        margin-bottom: 250px;
+        margin-right: 50px;
+        .especial {
+            position: relative;
+            z-index: 1;
+            width: 357px;
+            height: 275px;
+
+        }
+    .fav{
+        width: 32px;
+        position: absolute;
+        margin-top: 17px;
+        margin-left: 253px;
+        z-index: 2;
+    }
+    .down{
+        width: 32px;
+        position: absolute;
+        margin-top: 17px;
+        margin-left: 295px;
+        z-index: 2;
+    }
+    .exp {
+     width: 32px;
+     position: absolute;
+     margin-top: 17px;
+     margin-left: 337px;
+     z-index: 2;
+ }
+ a{
+     background-image: url("/images/icon-download.svg");
+     background-repeat: no-repeat;
+     color: transparent;
+    border: 1px cornflowerblue;
+    }
+        
+        
+
+        
+
+            
+           
+                
+                
+            
+            
+            img {
+
+                width: auto;
+                position: relative;
+                margin-top: 10px;
+                margin-left: 20px;
+                opacity: 0.7;
+                background: #FFFFFF;
+                border-radius: 6px;
+
+                width: 32px;
+                height: 32px;
+            }
+
+        }}
+        
+    
+    
+    //ESTILO DEL FOOTER
+    //SECCION FOOTER DEL INDEX.HTML
+    #fotindex {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        height: 7.6%;
+        align-items: center;
+        font-family: Roboto-Regular;
+        font-size: 13px;
+        color: #000000 100%;
+        letter-spacing: 0;
+        //margin-right: 50px;
+
+        p {
+            display: flex;
+            padding-left: 80px;
+            padding-right: 80px;
+        }
+
+        #redes {
+            display: inline-flex;
+            margin-left: 10.8%;
+
+            img {
+                padding-right: 10px;
+            }
+        }
+
+        #copyright {
+            border: 1px solid black;
+            margin-right: 11%;
+
+        }
+    }

@@ -1,24 +1,79 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Favoritos</title>
+    <title>Mis Favoritos</title>
+    <link rel="stylesheet" href="/styles/styles.css">
 </head>
-<link rel="stylesheet" href="styles/styles.css">
+
 <body>
     <header>
-        <img src="/images/logo-desktop.svg" alt="logo_gifos">
-        <ul>
-            <li>MODO NOCTURNO</li>
-            <li>FAVORITOS</li>
-            <li>MIS GIFOS</li>
-        </ul>
+        <img id="logo" src="/images/logo-desktop.svg" alt="logo_gifos">
+        <nav>
+            <ul>
+                <li>MODO NOCTURNO</li>
+                <li>FAVORITOS</li>
+                <li>MIS GIFOS</li>
+            </ul>
+            <img id="boton_gifo" src="/images/button-crear-gifo.svg" alt="crear_gifo">
+        </nav>
+
+
     </header>
-    <div id="intermedio">INTERMEDIO</div>
-    <div id="trending">TRENDING</div>
-<footer>FOOTER</footer>
+    <img id="iconsecfav" src="/images/icon-favoritos.svg" alt="">
+    <p id="pfav">Favoritos</p>
+        
+    <div id="showfav">
+        <!--Aqui se muestran los gif almacenados en el localstorage-->
+    </div>
+    <img id='vermas' src="/images/CTA-ver-mas.svg" alt="">
+
+    <div id="trending">
+    
+        <h1>Trending GIFOS</h1><br>
+        <h2>Mira los últimos GIFO de nuestra comunidad.</h2><br>
+        <img id='sleft' src="/images/button-slider-left.svg" alt="">
+        <div class="giftrending">
+            
+            <img class="especial uno" src="" alt="">
+            <img class="fav" src='/images/icon-fav.svg' alt="">
+            <img class="down" src='/images/icon-download.svg' alt="">
+            <img class="exp" src='/images/icon-max-normal.svg' alt="">
+    
+        </div>
+        <div class="giftrending">
+            <img class="especial dos" src="" alt="">
+            <img class="fav" src='/images/icon-fav.svg' alt="">
+            <img class="down" src='/images/icon-download.svg' alt="">
+            <img class="exp" src='/images/icon-max-normal.svg' alt="">
+    
+        </div>
+        <div class="giftrending">
+            <img class="especial tres" src="" alt="">
+            <img class="fav" src='/images/icon-fav.svg' alt="">
+            <img class="down" src='/images/icon-download.svg' alt="">
+            <img class="exp" src='/images/icon-max-normal.svg' alt="">
+        </div>
+        <img id="sright" src="/images/Button-Slider-right.svg" alt="">
+    
+    </div>
+
+    <footer id="fotindex">
+
+        <div id="redes">
+            <p>Compartir en:</p>
+            <img src="/images/icon_facebook.svg" alt="icon_facebook">
+            <img src="/images/icon-twitter.svg" alt="icon-twitter">
+            <img src="/images/icon_instagram.svg" alt="icon_instagram">
+        </div>
+
+        <p id="copyright">© GIFOS 2020 All Rights Reserved.</p>
+    </footer>
+
     
 </body>
+<script src="favoritos.js"></script>
 </html>

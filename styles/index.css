@@ -1,0 +1,170 @@
+header {
+  width: 100%;
+  border-top: 6px solid blue;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+header #logo {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  width: 59.1px;
+  height: 59.1px;
+  margin-left: 10.8%;
+  margin-top: 1.5%;
+  border: 1px solid black;
+}
+
+header nav {
+  position: relative;
+  margin-left: 50%;
+  margin-top: 1.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  border: 1px solid black;
+}
+
+header nav ul {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-top: 5px;
+  border: 1px solid blue;
+}
+
+header nav ul li {
+  font-family: var(--primary-font);
+  font-size: 13px;
+  color: #572EE5;
+  letter-spacing: 0;
+  text-align: center;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  padding-right: 50px;
+}
+
+header nav #boton_gifo {
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 54px;
+  height: 54px;
+  border: 1px solid black;
+}
+
+#busqueda {
+  font-family: var(--primary-font);
+  font-size: 35px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 50px;
+  position: relative;
+}
+
+#busqueda span {
+  color: #50E3C2;
+}
+
+#busqueda img {
+  display: block;
+  position: relative;
+  margin: auto;
+}
+
+#busqueda input {
+  background: #FFFFFF;
+  border: 1px solid #572EE5;
+  border-radius: 27px;
+  border-radius: 27px;
+  width: 551px;
+  height: 50px;
+  font-family: Roboto-Regular;
+  font-size: 16px;
+  color: #9CAFC3;
+  text-align: left;
+  margin: auto;
+}
+
+#busqueda #p1 {
+  font-family: Montserrat-Bold;
+  font-size: 18px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 25px;
+}
+
+#busqueda #p2 {
+  font-family: Montserrat-Medium;
+  font-size: 16px;
+  color: #572EE5;
+  text-align: center;
+  line-height: 25px;
+}
+
+#trending {
+  background: #F3F5F8;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 1440px;
+  height: 640px;
+}
+
+#trending .giftrending {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+  margin-bottom: 250px;
+  margin-right: 150px;
+}
+
+#trending .giftrending .especial {
+  position: absolute;
+  width: 357px;
+  height: 257px;
+}
+
+#trending .giftrending .icons {
+  position: relative;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  width: 32px;
+  height: 32px;
+  margin-top: 10px;
+  margin-left: 220px;
+}
+
+#trending .giftrending .icons img {
+  margin-left: 10px;
+}
+
+#fotindex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+footer {
+  width: 100%;
+  border: 2px solid black;
+  position: relative;
+  display: inline-block;
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+  -ms-flex-line-pack: distribute;
+      align-content: space-around;
+  border: none;
+}
+/*# sourceMappingURL=index.css.map */
