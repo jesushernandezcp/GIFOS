@@ -1,0 +1,484 @@
+//ESTILO DEL INTERMEDIO
+
+
+//SECCION INDEX.HTML
+#busqueda {
+
+    position: relative;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+
+
+    #tituloSeccionBuscar {
+        font-family: var(--primary-font);
+        font-size: 35px;
+        color: #572EE5;
+        line-height: 50px;
+        width: 44.9%;
+        height: 6.6%;
+        text-align: center;
+        margin: auto;
+
+        #gifosEnfasis {
+            color: #50E3C2;
+        }
+    }
+
+
+
+    #imagenSeccionBuscar {
+        display: block;
+        position: relative;
+        padding-top: 20px;
+        margin: auto;
+    }
+
+
+    #buscador {
+        position: relative;
+        display: grid;
+        justify-content: space-between;
+
+
+        grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        border: 1px solid #572EE5;
+        //border: 1px solid orange;
+        //padding-left: 1.8%;
+        //padding-right: 1.8%;
+        border-radius: 27px;
+        width: 551px;
+        min-height: 50px;
+        text-align: justify;
+        //margin-left: 27.5%;
+        margin: auto;
+
+        #inputLine {
+            display: inline-flex;
+            margin-top: 15px;
+            justify-content: center;
+            align-items: center;
+            
+            #buscar {
+                //background: coral;
+                width: 85%;
+                font-size: 16px;
+                position: relative;
+                //margin-top: 3%;
+                border: hidden;
+                cursor: pointer;
+                outline-style: unset;
+                text-overflow: ellipsis;
+                text-transform: lowercase;
+                text-indent: 15px;
+                font-family: 'Roboto', sans-serif;
+                
+
+            }
+
+            #iconoClose {
+                position: relative;
+                cursor: pointer;
+                //background: chartreuse;
+                width: 20px;
+                height: 20px;
+
+            }
+
+            #iconoLupa {
+                position: relative;
+                cursor: pointer;
+                visibility: hidden;
+                //background: chocolate;
+                width: 20px;
+                height: 20px;
+            }
+
+        }
+
+
+        .container {
+            position: relative;
+            float: left;
+            font-size: 16px;
+            font-family: var(--primary-font);
+            //visibility: hidden;
+
+            #listaResultados {
+                list-style: url(/images/icon-search.svg);
+                display: none;
+                
+
+            }
+
+
+
+        }
+
+        #listaResultados li:hover {
+            cursor: pointer;
+        }
+
+    }
+    
+.wordStrong{
+    
+    font-size: 16px;
+    font-weight: normal;
+    
+    
+}
+
+.wordStrong:hover{
+    cursor: pointer;
+    text-decoration: underline;
+    font-size: 20px;
+}
+
+    #palabrasTrending {
+        margin-top: 60px;
+        font-size: 16px;
+        color: #572EE5;
+        text-align: center;
+        line-height: 25px;
+
+        position: relative;
+
+        #trendingEnfasis {
+            font-size: 18px;
+            color: #572EE5;
+            text-align: center;
+            line-height: 25px;
+            font-family: var(--primary-font);
+        }
+    }
+
+
+
+}
+
+
+
+#titResBusqueda {
+    width: 550px;
+    height: 30px;
+    color: #572EE5;
+
+    size: 35px;
+    margin: auto;
+    text-align: center;
+    font-family: var(--primary-font);
+
+
+}
+
+#restopic {
+    display: inline-flex;
+    flex-wrap: wrap;
+    width: 85%;
+    align-self: center;
+    justify-content: space-around;
+    height: 100%;
+    text-align: center;
+    position: relative;
+
+    #areaSinres {
+        display: flex;
+        width: auto;
+        height: auto;
+        flex-direction: column;
+        background: #572EE5;
+    }
+}
+
+
+.framegif {
+    display: flex;
+    position: relative;
+    
+    margin-right: 2%;
+    margin-top: 29px;
+    width: 260px;
+    height: 200px;
+}  
+    // CLASE DE LA IMAGEN GIFO ENCONTRADO
+    .gifound {
+        position: relative;
+        width: 260px;
+        height: 200px;
+        margin-bottom: 25px;
+    }
+
+    .frameIcons {
+        position: absolute;
+        //width: fit-content;
+        display: flex;
+        justify-content: flex-end;
+        
+        opacity: 0;
+        width: 100%;
+        height: 100%;
+
+        .found {
+            margin-top: 10px;
+            margin-right: 10px;
+            width: 32px;
+            height: 32px;
+        }
+        
+        
+    }
+    
+    .dataGif {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-left: 13px;
+    margin-top: 130px;
+    width: 260px;
+    height: 60px;
+    font-size: 15px;
+    //height: auto;
+    font-family: 'Roboto', sans-serif;
+    //background-color: yellow;
+    //z-index: 1;
+    color: white;
+    opacity: 0;
+    //visibility: hidden;
+    transition: all 500ms ease-out;
+    text-align: left;
+
+    }
+
+.framegif:hover .frameIcons{
+    opacity: 0.7;
+    filter: brightness(130%);
+    transition:all 700ms ease-out;
+    background-color: blue;
+}
+.framegif:hover .dataGif{
+    opacity: 1;
+}
+
+
+
+
+
+
+#mas {
+
+    visibility: hidden;
+    width: 127px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #572EE5;
+    font-weight: bold;
+    margin-top: 3.1%;
+    margin-bottom: 3.1%;
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+
+    background-color: white;
+    color: blue;
+    text-transform: uppercase;
+}
+
+//-------------------------MAIN AREA DE FAVORITOS--------------//
+
+#storageFav {
+    position: relative;
+    margin-top: 5%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    
+
+    #iconsecfav {
+        width: 28px;
+        height: 21px;
+        position: relative;
+        margin-top: 11px;
+        margin: auto;
+        margin-bottom: 6px;
+
+    }
+#pfav {
+        font-family: var(--primary-font);
+        font-size: 35px;
+        color: #572EE5;
+        line-height: 50px;
+        width: 44.9%;
+        height: 6.6%;
+        text-align: center;
+        margin: auto;
+        margin-bottom: 36px;
+        
+
+    }
+}
+
+#areaSinFav {
+    display: flex;
+    width: 431px;   
+    height: auto;
+    flex-direction: column;
+    margin-top: 109.3px;
+   
+    align-items: center;
+
+    #msjsinFav {
+        display: flex;
+        font-family: Montserrat-Bold;
+        font-size: 22px;
+        color: #50E3C2;
+        text-align: center;
+        line-height: 33px;
+        width: 350px;
+        //height: 66px;
+        
+    }
+}
+
+#showfav {
+    display: flex;
+    flex-wrap: wrap;
+    width: 85%;
+    align-self: center;
+    height: 100%;
+    text-align: center;
+    position: relative;
+    
+
+
+
+
+}
+
+.frameFav {
+    display: flex;
+    position: relative;
+    margin-right: 2%;
+    
+    margin-left: 20px;
+   
+}
+    .giFav {
+        position: relative;
+        width: 260px;
+        height: 200px;
+        margin-bottom: 25px;
+     
+        
+    }
+
+    
+    .iconsFav {
+        position: absolute;
+        //z-index: 1;
+        width: 260px;
+        height: 200px;
+        display: flex;
+        justify-content: end;
+        transition: all 500ms ease-out;
+        opacity: 0;
+        //visibility: hidden;
+
+        
+    
+        .found {
+            margin-right: 10px;
+            width: 40px;
+            height: 32px;
+        }
+        .favActive{
+            background: #FFFFFF;
+            border-radius: 6px;
+            width: 32px;
+            height: 32px;
+            display: flex;
+            margin-right: 14px;
+            .locfav{
+            width: 18px;
+            height: 15.9px;
+            margin: auto;
+    
+            }
+      
+        }
+        
+
+
+
+
+    
+}
+
+
+.dataFav {
+    position: absolute;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    margin-top: 130px;
+    width: 260px;
+    height: 60px;
+    font-size: 15px;
+    //height: auto;
+    font-family: 'Roboto', sans-serif;
+    //background-color: yellow;
+    //z-index: 1;
+    color: white;
+    opacity: 0;
+    //visibility: hidden;
+    transition: all 500ms ease-out;
+
+}
+
+
+#mas {
+
+    visibility: hidden;
+    width: 127px;
+    height: 50px;
+    border-radius: 25px;
+    border: 1px solid #572EE5;
+    font-weight: bold;
+    margin-top: 3.1%;
+    margin-bottom: 3.1%;
+    align-self: center;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+
+    background-color: white;
+    color: blue;
+    text-transform: uppercase;
+}
+
+.favActive:hover {
+    transform: translate(1px, -2px);
+}
+
+.frameFav:hover .iconsFav{
+    //z-index: -1;
+    opacity: 0.7;
+    visibility: visible;
+    background-color:blue;
+    
+}
+.frameFav:hover .dataFav{
+    opacity: 1;
+    visibility: visible;
+}
+
+.options{
+    font-family: 'Roboto', sans-serif;
+}
+
+.options:hover{
+    background-color: blue;
+    color: white;
+    transition: all 500ms ease;
+}

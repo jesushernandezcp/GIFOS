@@ -1,92 +1,172 @@
-let api_key="9oiuzjrmvyyPsuoPNGd28OmEdO0oL40H";
-let uri="https://api.giphy.com/v1/gifs/search"
-let misgifos=document.getElementById("grid_gifos");
-let imagen=document.createElement('img');
-let lista=document.createElement('div');
+//let plasmar;
+//let paginado = 12; // variable de control maximo de paginado de gifs, asociada al boton ver mas
+//let paginadoMin = 0; //variable de control minimo de paginado de gifs
+//let btnmas = document.getElementById('mas');
+//let misGifos;
+//let titulo = document.getElementById('tibus');
 
-    function migiphy() {
-        fetch(uri+"?api_key="+api_key+"&q="+prompt("Escriba la palabra a buscar"))
-          
-        .then(response => response.json())
-        .then( json => {
-                console.log(json);
-                let undato=json.d0ata[4].url;
-                console.log(undato);
-                imagen.src=undato;
-                misgifos.appendChild(imagen);
-                
-                /*for (let index = 0; index < 5; index++){
-                    
-                    let atsrc=json.data[index].url;
-                    imagen.src=atsrc;
-                    misgifos.appendChild(imagen);
-                
-              }*/
-                
-                //imagen.src=undato;
-                //resultado.appendChild(imagen);
-            })
-            .catch(err => console.error(err));
-            
-        };
-
-//let boton=document.getElementById("search");
-//addEventListener("click",giphy());
-
-//COMPROBACION DE FUNCIONES DE MULTIMEDIA
-function hasGetUserMedia() {
-    // Note: Opera builds are unprefixed.
-    return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||
-              navigator.mozGetUserMedia || navigator.msGetUserMedia);
-  }
-  
-  if (hasGetUserMedia()) {
-    // Good to go!
-  } else {
-    alert('getUserMedia() is not supported in your browser');
-  }
-
-  var onFailSoHard = function(e) {
-    console.log('Reeeejected!', e);
-  };
-
-
-  //FUNCION PARA ACTIVAR CAMARA
-
-function cameractive() {
-    navigator.mediaDevices.getUserMedia({video:true})
-    .then(function(mediaStream) {
-        let areavideo=document.querySelector('video');
-        areavideo.srcObject = mediaStream;
-        areavideo.play()
+//-----SECCION CON FUNCIONES PARA CARGAR LOS GIFOS CREADOS ALMACENADOS EN EL LOCALSTORAGE-----
+/*if (!localStorage.getItem('misGifos')) {
+        localStorage.setItem('misGifos', '[]');
     
-        }
-      )
-    .catch(function(err) {
-        console.error('algo esta fallando');
-      });
+    }*/
+    misGifos = JSON.parse(localStorage.getItem('misGifos'));
+    //console.log(misGifos);
+    gifosCreados = misGifos.length;
+    console.log(gifosCreados);    
+
+/*
+function cargarStorage() {
+    
+  console.log('el arreglo json contiene: ' + jsonE)
+  //en caso de que no haya GIFOS almacenados en el storage
+  if (gifosCreados === 0) {
+      plasmar.innerHTML =
+          `
+          <div id="areaSinFav">
+              <img id='sinFav' src="/images/icon-fav-sin-contenido.svg" alt"imagen sin resultados" width="150" height="151">
+              <br>
+              <p id='msjsinFav'>"¡Guarda tu primer GIFO en Favoritos 
+              para que se muestre aquí!"</p>
+          </div>
+
+      `;
+  }
+
+//si los GIFOS almacenados son menos de 12 entonces cargarlos y no mostrar el boton VER MAS
+
+if (gifosCreados <= paginado) {
+  console.log('todos los elementos caben en una grilla');
+  for (paginadoMin = 0; paginadoMin < gifosCreados; paginadoMin++) {
+
+      //console.log(json.data[j]);
+      let imgres = document.createElement('div');
+      imgres.innerHTML =
+          `
+              <div class='frameFav'>
+
+                  <img class='giFav' src="${misGifos[paginadoMin].urlImagen}" alt="">
+
+                  <div class='iconsFav'>
+                      <div class='favActive'><img id='${misGifos[paginadoMin].id}' class='locfav' src='/images/icon-fav-active.svg' alt=""></div>
+                      <div class='favActive'><img id='${misGifos[paginadoMin].id}' class='found sdown' src='/images/icon-download.svg' alt=""></div>
+                      <div class='favActive'><img id='${misGifos[paginadoMin].urlImagen}' class='found smax' src='/images/icon-max-normal.svg' alt=""></div>
+                  </div>
+
+                  <div class='dataFav'>
+                      <p>${misGifos[paginadoMin].usuario}<br>
+                      <span>${misGifos[paginadoMin].title}</span>
+                      </p>
+                  </div>
+                  
+                   </div>
+              </div>
+              `
+      plasmar.appendChild(imgres);
+
+  }
+
+}
+//si los GIFOS almacenados son mas de 12 entonces cargarlos y mostrar el boton VER MAS
+else {
+   btnmas.textContent = 'Ver Mas';
+  btnmas.style.visibility = 'visible';
+
+  for (paginadoMin = 0; paginadoMin < paginado; paginadoMin++) {
+      //console.log(json.data[j]);
+      let imgres = document.createElement('div');
+      imgres.innerHTML =
+          `
+          <div class='frameFav'>
+
+          <img class='giFav' src="${misGifos[paginadoMin].urlImagen}" alt="">
+
+          <div class='iconsFav'>
+              <div class='favActive'><img id='${misGifos[paginadoMin].id}' class='locfav' src='/images/icon-fav-active.svg' alt=""></div>
+                  <img id='${misGifos[paginadoMin].id}' class='found sdown' src='/images/icon-download.svg' alt="">
+                  <img id='${misGifos[paginadoMin].urlImagen}' class='found smax' src='/images/icon-max-normal.svg' alt="">
+              </div>
+
+              <div class='dataFav'>
+                  <p>${misGifos[paginadoMin].usuario}<br>
+                  <span>${misGifos[paginadoMin].title}</span>
+                  </p>
+              </div>
           
-}
+           </div>
+      </div>
+              `
+      plasmar.appendChild(imgres);
 
-let btnactive=document.getElementById('btnactive');
-btnactive.addEventListener('click',cameractive);
 
-//FUNCION PARA APAGAR CAMARA
-function cameroff() {
-  navigator.mediaDevices.getUserMedia({video:false})
-  /*.then(function(mediaStream) {
-      let areavideo=document.querySelector('video');
-      areavideo.srcObject = mediaStream;
-      areavideo.play()
-  
+  }
+//cargar mas GIFOS conforme se presiona el botono VER MAS
+  btnmas.addEventListener('click', () => {
+      let r = (gifosCreados - paginado) / 12;
+      if (r >= 1) {
+          paginado += 12;
+          for (paginadoMin; paginadoMin < paginado; paginadoMin++) {
+              let imgres = document.createElement('div');
+              imgres.innerHTML =
+                  `
+                  <div class='frameFav'>
+
+                  <img class='giFav' src="${misGifos[paginadoMin].urlImagen}" alt="">
+
+                  <div class='iconsFav'>
+                      <div class='favActive'><img id='${misGifos[paginadoMin].id}' class='locfav' src='/images/icon-fav-active.svg' alt=""></div>
+                          <img id='${misGifos[paginadoMin].id}' class='found sdown' src='/images/icon-download.svg' alt="">
+                          <img id='${misGifos[paginadoMin].urlImagen}' class='found smax' src='/images/icon-max-normal.svg' alt="">
+                      </div>
+
+                      <div class='dataFav'>
+                          <p>${misGifos[paginadoMin].usuario}<br>
+                          <span>${misGifos[paginadoMin].title}</span>
+                          </p>
+                      </div>
+                  
+                   </div>
+              </div>
+              `
+              plasmar.appendChild(imgres);
+
+          }
       }
-    )
-  .catch(function(err) {
-      console.error('algo esta fallando');
-    });
-    */    
+      else {
+          paginado += gifosCreados - paginado;
+          for (paginadoMin; paginadoMin < paginado; paginadoMin++) {
+              let imgres = document.createElement('div');
+              imgres.innerHTML =
+                  `
+                  <div class='framegif'>
+
+                  <img class='giFav' src="${misGifos[paginadoMin].urlImagen}" alt="">
+
+                  <div class='iconsFav'>
+                      <div class='favActive'><img id='${misGifos[paginadoMin].id}' class='locfav' src='/images/icon-fav-active.svg' alt=""></div>
+                          <img id='${misGifos[paginadoMin].id}' class='found sdown' src='/images/icon-download.svg' alt="">
+                          <img id='${misGifos[paginadoMin].urlImagen}' class='found smax' src='/images/icon-max-normal.svg' alt="">
+                      </div>
+
+                      <div class='dataFav'>
+                          <p>${misGifos[paginadoMin].usuario}<br>
+                          <span>${misGifos[paginadoMin].title}</span>
+                          </p>
+                      </div>
+                  
+                   </div>
+              </div>
+              `
+              plasmar.appendChild(imgres);
+              btnmas.style.visibility = 'hidden';
+
+          }
+      }
+
+
+  })
 }
 
-let btnoff=document.getElementById('btnoff');
-btnoff.addEventListener('click',cameroff);
-ExtensionScriptApis.video='off';
+
+}
+*/

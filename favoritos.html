@@ -11,55 +11,105 @@
 
 <body>
     <header>
-        <img id="logo" src="/images/logo-desktop.svg" alt="logo_gifos">
-        <nav>
-            <ul>
-                <li>MODO NOCTURNO</li>
-                <li>FAVORITOS</li>
-                <li>MIS GIFOS</li>
-            </ul>
-            <img id="boton_gifo" src="/images/button-crear-gifo.svg" alt="crear_gifo">
-        </nav>
+        
+            
+                <img id="logo" src="/images/logo-desktop.svg" alt="logo_gifos">
+                <nav>
+                    <ul>
+                        <li class="listaDiurno" id="modoNoc">MODO NOCTURNO</li>
+                        <li>FAVORITOS</li>
+                        <li class="listaDiurno"><a id="gifhtml" href="/misgifos.html">MIS GIFOS</a> </li>
+                    </ul>
+                    <img id="boton_gifo" src="/images/button-crear-gifo.svg" alt="crear_gifo">
+                </nav>
 
 
     </header>
-    <img id="iconsecfav" src="/images/icon-favoritos.svg" alt="">
-    <p id="pfav">Favoritos</p>
-        
-    <div id="showfav">
-        <!--Aqui se muestran los gif almacenados en el localstorage-->
-    </div>
-    <img id='vermas' src="/images/CTA-ver-mas.svg" alt="">
+    <main>             
+    <section>
+    <div id="storageFav">
+        <img id="iconsecfav" src="/images/icon-favoritos.svg" alt="">
+        <p id="pfav">Favoritos</p>
 
-    <div id="trending">
-    
-        <h1>Trending GIFOS</h1><br>
-        <h2>Mira los últimos GIFO de nuestra comunidad.</h2><br>
-        <img id='sleft' src="/images/button-slider-left.svg" alt="">
-        <div class="giftrending">
-            
-            <img class="especial uno" src="" alt="">
-            <img class="fav" src='/images/icon-fav.svg' alt="">
-            <img class="down" src='/images/icon-download.svg' alt="">
-            <img class="exp" src='/images/icon-max-normal.svg' alt="">
-    
+        <div id="showfav">
+            <!--Aqui se muestran los gif almacenados en el localstorage-->
         </div>
-        <div class="giftrending">
-            <img class="especial dos" src="" alt="">
-            <img class="fav" src='/images/icon-fav.svg' alt="">
-            <img class="down" src='/images/icon-download.svg' alt="">
-            <img class="exp" src='/images/icon-max-normal.svg' alt="">
-    
-        </div>
-        <div class="giftrending">
-            <img class="especial tres" src="" alt="">
-            <img class="fav" src='/images/icon-fav.svg' alt="">
-            <img class="down" src='/images/icon-download.svg' alt="">
-            <img class="exp" src='/images/icon-max-normal.svg' alt="">
-        </div>
-        <img id="sright" src="/images/Button-Slider-right.svg" alt="">
-    
+        <input src="/images/CTA-ver-mas.svg" id="mas" type="button" value="VER MáS">
     </div>
+    </section>
+    <section id="seccionCarrusel">
+
+        <div id="tituloSeccion">
+            <h1>Trending GIFOS</h1>
+            <h2>Mira los últimos GIFO de nuestra comunidad.</h2>
+        </div>
+
+
+        <div id="trending">
+            <img id='sleft' src="/images/button-slider-left.svg" alt="">
+            <div class="giftrending">
+                <img class="gifoImagen" src="" alt="">
+                <div class="botonesGifo">
+                    <img class="fav btn" src='/images/icon-fav.svg' alt="">
+                    <img class="down btn" src='/images/icon-download.svg' alt="">
+                    <img class="exp btn" src='/images/icon-max-normal.svg' alt="">
+                </div>
+                <div class='datosGifo'>
+                    <p class="dataGifuser">user<br>
+                        <strong>title</strong>
+                    </p>
+                </div>
+
+            </div>
+            <div class="giftrending">
+                <img class="gifoImagen" src="" alt="">
+                <div class="botonesGifo">
+                    <img class="fav btn" src='/images/icon-fav.svg' alt="">
+                    <img class="down btn" src='/images/icon-download.svg' alt="">
+                    <img class="exp btn" src='/images/icon-max-normal.svg' alt="">
+
+                </div>
+                <div class='datosGifo'>
+                    <p class="dataGifuser">user<br>
+                        <strong>title</strong>
+                    </p>
+
+
+                </div>
+
+            </div>
+            <div class="giftrending">
+                <img class="gifoImagen" src="" alt="">
+                <div class="botonesGifo">
+                    <img class="fav btn" src='/images/icon-fav.svg' alt="">
+                    <img class="down btn" src='/images/icon-download.svg' alt="">
+                    <img class="exp btn" src='/images/icon-max-normal.svg' alt="">
+
+                </div>
+                <div class='datosGifo'>
+                    <p class="dataGifuser">user<br>
+                        <strong>title</strong>
+                    </p>
+
+
+                </div>
+
+            </div>
+
+            <img id="sright" src="/images/Button-Slider-right.svg" alt="">
+        </div>
+
+
+
+
+        <div id="popUpBox">
+
+
+
+
+        </div>
+    </section>
+
 
     <footer id="fotindex">
 
@@ -73,7 +123,12 @@
         <p id="copyright">© GIFOS 2020 All Rights Reserved.</p>
     </footer>
 
-    
+    </main>
 </body>
-<script src="favoritos.js"></script>
+<!--<script src="/scripts/script.js"></script>-->
+<script src="/scripts/carrusel.js"></script>
+<script src="/scripts/favoritos.js"></script>
+<script src="/scripts/nocturno.js"></script>
+
+
 </html>

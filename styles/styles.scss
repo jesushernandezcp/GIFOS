@@ -1,8 +1,18 @@
 //ROOT
-@import "header";
+
 @import "index";
 @import "favoritos";
 @import "misgifos";
+@import "header";
+@import "nocturno";
+@import "footer";
+@import "carrusel";
+@import "main";
+@import "creargifos";
+
+
+
+
 
 
 
@@ -10,11 +20,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&family=Roboto&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
 ::-webkit-scrollbar{display: none;}
 :root{
 
     --primary-font:'Montserrat', sans-serif;
     --secondary-font:'IBM Plex Sans', sans-serif;
+    
+    
     
 }
 

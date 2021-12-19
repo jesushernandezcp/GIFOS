@@ -24,25 +24,30 @@ header {
         height: 59.1px;
         margin-left: 10.8%;
         margin-top: 1.5%;
-        border: 1px solid black;
+        
     }
 
     nav {
         position: relative;
-        margin-left: 50%;
+        margin-left: 37.5%;
+        
         margin-top: 1.5%;
         display: flex;
-        border: 1px solid black;
+        
 
         ul {
             display: inline-flex;
             padding-top: 5px;
-            border: 1px solid blue;
+            
 
             li {
                 @include menu();
                 display: inline-flex;
                 padding-right: 50px;
+            
+            a{
+                text-decoration: none;
+            }
             }
         }
 
@@ -51,11 +56,11 @@ header {
             display: flex;
             width: 54px;
             height: 54px;
+            border: none;
 
-            border: 1px solid black;
+            
         }
     }
 
 
 }
-

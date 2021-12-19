@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Gifos</title>
+    <link rel="stylesheet" href="/styles/styles.css">
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="/images/logo-desktop.svg" alt="logo_gifos">
+        <nav>
+            <ul>
+                <li class="listaDiurno" id="modoNoc">MODO NOCTURNO</li>
+                <li class="listaDiurno"><a id="favhtml" href="/favoritos.html">FAVORITOS</a> </li>
+                <li>MIS GIFOS</li>
+            </ul>
+            <img id="boton_gifo" src="/images/button-crear-gifo.svg" alt="crear_gifo">
+        </nav>
+
+
+    </header>
+    <div id="videocont">
+        <p class="titulos">Aquí podrás</p>
+        <p class="titulos tit2">crear tus propios GIFOS</p>
+        <p class="subtit tit3">¡Crea tu GIFO en sólo 3 pasos!</p>
+        <p class="subtit tit4">(sólo necesitas una cámara para grabar un video)</p>
+        <video>
+
+        </video>
+    </div>
+    <div id="pasos">
+        <h3 id="pasoUno">1</h3>
+        <h3 id="pasoDos">2</h3>
+        <h3 id="pasoTres">3</h3>
+
+    </div>
+    <p id="cronometro">
+        <span id="horas">00:</span>
+        <span id="minutos">00:</span>
+        <span id="segundos">00</span>
+        <p id="rewind">REPETIR CAPTURA</p>
+    </p>
+
+    <p id="barra"></p>
+    <p id="btncomenzar">COMENZAR</p>
+    <button id="grabar">GRABAR</button>
+    <button id="detener">FINALIZAR</button>
+    <button id="subir">SUBIR GIFO</button>
+
+
+
+</body>
+<script src="https://www.WebRTC-Experiment.com/RecordRTC.js"></script>
+
+<script src="/scripts/crear_gifo.js"></script>
+<script src="/scripts/nocturno.js"></script>
+
+
+</html>

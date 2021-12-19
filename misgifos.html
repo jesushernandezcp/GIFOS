@@ -4,31 +4,125 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Gifos</title>
-    <link rel="stylesheet" href="/styles/misgifos.css">
+    <title>Document</title>
+    <link rel="stylesheet" href="styles/styles.css">
 </head>
 <body>
     <header>
         <img id="logo" src="/images/logo-desktop.svg" alt="logo_gifos">
         <nav>
             <ul>
-                <li>MODO NOCTURNO</li>
-                <li>FAVORITOS</li>
-                <li>MIS GIFOS</li>
+                <li class="listaDiurno" id="modoNoc">MODO NOCTURNO</li>
+                <li class="listaDiurno"><a id="favhtml" href="/favoritos.html">FAVORITOS</a> </li>
+                <li class="listaDiurno"><a id="gifhtml" href="/misgifos.html">MIS GIFOS</a> </li>
             </ul>
             <img id="boton_gifo" src="/images/button-crear-gifo.svg" alt="crear_gifo">
         </nav>
 
 
     </header>
-    
-    <p id="tit1">Aquí podrás crear tus propios GIFOS</p>
-    <p id="tit2">¡Crea tu GIFO en sólo 3 pasos! (sólo necesitas una cámara para grabar un video)</p>
-<video>
-    
-</video>
-<input id='btnactive' type="button">Activar camara
-<input id='btnoff' type="button">Apagar camara
+    <main>
+        <section>
+            <div id="storageFav">
+                <img id="iconsecfav" src="/images/icon-mis-gifos.svg" alt="iconomisgifos">
+                <p id="pfav">Mis GIFOS</p>
+        
+                <div id="muestraMisGifos">
+                    <!--Aqui se muestran los gif almacenados en el localstorage-->
+                </div>
+                <input src="/images/CTA-ver-mas.svg" id="mas" type="button" value="VER MáS">
+            </div>
+            </section>
+    <section id="seccionCarrusel">
+            
+        <div id="tituloSeccion">
+            <h1>Trending GIFOS</h1>
+            <h2>Mira los últimos GIFO de nuestra comunidad.</h2>
+        </div>
+
+
+        <div id="trending">
+            <img id='sleft' src="/images/button-slider-left.svg" alt="">
+            <div class="giftrending">
+                <img class="gifoImagen" src="" alt="">
+                <div class="botonesGifo">
+                    <img class="fav btn" src='/images/icon-fav.svg' alt="">
+                    <img class="down btn" src='/images/icon-download.svg' alt="">
+                    <img class="exp btn" src='/images/icon-max-normal.svg' alt="">
+                </div>
+                <div class='datosGifo'>
+                    <p class="dataGifuser">user<br>
+                        <strong>title</strong>
+                    </p>
+                </div>
+
+            </div>
+            <div class="giftrending">
+                <img class="gifoImagen" src="" alt="">
+                <div class="botonesGifo">
+                    <img class="fav btn" src='/images/icon-fav.svg' alt="">
+                    <img class="down btn" src='/images/icon-download.svg' alt="">
+                    <img class="exp btn" src='/images/icon-max-normal.svg' alt="">
+
+                </div>
+                <div class='datosGifo'>
+                    <p class="dataGifuser">user<br>
+                        <strong>title</strong>
+                    </p>
+
+
+                </div>
+
+            </div>
+            <div class="giftrending">
+                <img class="gifoImagen" src="" alt="">
+                <div class="botonesGifo">
+                    <img class="fav btn" src='/images/icon-fav.svg' alt="">
+                    <img class="down btn" src='/images/icon-download.svg' alt="">
+                    <img class="exp btn" src='/images/icon-max-normal.svg' alt="">
+
+                </div>
+                <div class='datosGifo'>
+                    <p class="dataGifuser">user<br>
+                        <strong>title</strong>
+                    </p>
+
+
+                </div>
+
+            </div>
+          
+            <img id="sright" src="/images/Button-Slider-right.svg" alt="">
+        </div>
+
+        
+
+
+        <div id="popUpBox">
+
+
+
+
+        </div>
+    </section>
+</main>
+<script src="/scripts/misgifos.js"></script>
+<footer id="fotindex">
+
+    <div id="redes">
+        <p id="compartir">Compartir en:</p>
+        <img class="redes" src="/images/icon_facebook.svg" alt="icon_facebook">
+        <img id="twitter" class="redes" src="/images/icon-twitter-hover.svg" alt="icon-twitter">
+        <img class="redes" src="/images/icon_instagram.svg" alt="icon_instagram">
+    </div>
+
+    <p id="copyright">© GIFOS 2020 All Rights Reserved.</p>
+
+</footer>
+<script src="/scripts/misgifos.js"></script>
+<script src="/scripts/carrusel.js"></script>
+
+<script src="/scripts/nocturno.js"></script>
+
 </body>
-<script src="misgifos.js"></script>
 </html>

@@ -1,0 +1,45 @@
+//ESTILO DEL FOOTER
+//SECCION FOOTER DEL INDEX.HTML
+#fotindex {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    height: 7.6%;
+    align-items: center;
+    font-family: 'Roboto', sans-serif;
+    font-size: 13px;
+    color: #000000 100%;
+    letter-spacing: 0;
+    //border: 1px black;
+    //background-color: black;
+    margin-top: 12%;
+    //margin-right: 50px;
+
+
+
+    #redes {
+        display: inline-flex;
+        margin-left: 10.8%;
+
+        p {
+            display: flex;
+            padding-left: 80px;
+            padding-right: 80px;
+
+        }
+
+        .redes {
+            padding-right: 10px;
+
+        }
+    }
+
+    #copyright {
+
+        font-family: 'Roboto', sans-serif;
+        margin-right: 11%;
+        font-size: 13px;
+
+    }
+}
+
